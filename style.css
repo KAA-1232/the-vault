@@ -1,0 +1,647 @@
+body{
+    font-size: 16px;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.5;
+    margin: 0; 
+    text-align: center;
+
+}
+
+.border{
+    padding: 0 10rem;
+}
+
+.navigation{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h3{
+    padding: 0;
+}
+
+.ex400{
+    display: none;
+}
+
+.img{
+    position: relative; /* Важно: для позиционирования дочерних элементов */
+    width: 90%; /* Задайте ширину контейнера */
+    height: 400px; /* Задайте высоту контейнера */
+    margin: 20px auto; /* Центрируем контейнер */
+
+    display: flex;          /* Включаем Flexbox */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center;  
+}
+
+.chaotic-image {
+    position: static; /* Абсолютное позиционирование внутри контейнера */
+    object-fit: cover; /* Чтобы изображения не искажались */
+}
+
+.image-1 {
+    width: 200px; /* Меньше всех */
+    height: 200px;
+    top: 0%; /* Сверху */
+    left: 15%; /* Слева */
+    z-index: 1; /* Поверх остальных */
+}
+
+.image-2 {
+    width: 250px; /* Больше всех */
+    height: 250px;
+    bottom: 0%; /* Снизу */
+    left: 40%; /* По центру */
+    z-index: 2; /* Поверх image-1 */
+}
+
+.image-3 {
+    width: 200px; /* Средний размер */
+    height: 200px;
+    top: 20%; /* Чуть ниже image-1 */
+    right: 10%; /* Справа */
+    z-index: 3; /* Поверх всех */
+}
+
+.image-11 {
+    display: none;
+}
+
+.image-21 {
+    width: 400px; /* Больше всех */
+    height: 400px;
+}
+
+.image-21 img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.menu-container {
+    position: relative; /* Для позиционирования выпадающего контента */
+    display: inline-block; /* Чтобы контейнер занимал только необходимую ширину */
+}
+
+/* Стили для кнопки (лейбла) */
+.menu-button {
+    /* Стили для кнопки (лейбла) */
+    padding: 10px;
+    border: none;
+    background-color: transparent; /* Прозрачный фон */
+    cursor: pointer;
+}
+
+/* Стили для иконки меню */
+.menu {
+    width: 25px;
+    height: auto;
+}
+
+.boxeat-container a {
+    text-decoration: none;
+}
+
+/* Стили для выпадающего контента */
+.dropdown-content {
+    position: absolute; /* Абсолютное позиционирование относительно контейнера */
+    top: 100%; /* Размещаем сразу под кнопкой */
+    left: -100px;
+    background-color: rgba(22, 20, 19, 1);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: none; /* Скрываем контент по умолчанию */
+}
+
+/* Стили для ссылок в выпадающем контенте */
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Стили для ссылок при наведении */
+.dropdown-content a:hover {
+    background-color: #585858;
+}
+
+/* Скрываем чекбокс (input) */
+#menu-toggle {
+    display: none;
+}
+
+/* Показываем контент, когда чекбокс отмечен */
+#menu-toggle:checked ~ .dropdown-content {
+    display: block;
+}
+
+h1{
+    padding: 0 50px;
+    color: rgba(227, 192, 157, 1);
+    font-size: 51px;
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+h2{
+    padding: 0 50px;
+    color: rgba(227, 192, 157, 1);
+    font-size: 31px;
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+h3{
+    padding: 0 50px;
+    color: rgb(0, 0, 0);
+    font-size: 21px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.button{
+    padding: 1rem 0 ;
+}
+
+a{
+    background-color: rgba(249, 146, 117, 1);
+    border: none;
+    padding: 1rem 3rem;
+    color: #FFF;
+    font-size: 21px;
+    margin: 2rem 0;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: rgb(255, 113, 74);
+}
+
+a:active{
+    transform: scale(1.1);
+    transform: transform  0.1s ease-in-out;;
+}
+
+.one, .three, .five{
+    background-color: rgba(254, 249, 240, 1);
+    padding: 5rem 0;
+}
+
+p{
+    padding: 0 230px;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.footer{
+    background-color: black;
+    padding: 2.5rem;
+}
+
+.footer p {
+    color: #ffffff;
+}
+
+
+
+@media (max-width: 768px){
+    .image-1 {
+        width: 150px; /* Меньше всех */
+        height: 150px;
+        top: 0%; /* Сверху */
+        left: 0%; /* Слева */
+        z-index: 1; /* Поверх остальных */
+    }
+    
+    .image-2 {
+        width: 200px; /* Больше всех */
+        height: 200px;
+        bottom: 5%; /* Снизу */
+        left: 30%; /* По центру */
+        z-index: 2; /* Поверх image-1 */
+    }
+    
+    .image-3 {
+        width: 150px; /* Средний размер */
+        height: 150px;
+        top: 10%; /* Чуть ниже image-1 */
+        right: -5%; /* Справа */
+        z-index: 3; /* Поверх всех */
+    }
+
+    .image-11 {
+        width: 200px; /* Меньше всех */
+        height: 200px;
+        top: 5%; /* Сверху */
+        left: 40%; /* Слева */
+        z-index: 1; /* Поверх остальных */
+    }
+    
+    .image-21 {
+        width: 250px; /* Больше всех */
+        height: 250px;
+        bottom: 0%; /* Снизу */
+        left: 0%; /* Слева */
+        z-index: 2; /* Поверх image-1 */
+    }
+
+    h1{
+        padding: 0 100px;
+        color: rgba(227, 192, 157, 1);
+        font-size: 31px;
+        text-align: center;
+        margin: 2.5rem 0;
+    }
+    
+    h2{
+        padding: 0 100px;
+        color: rgba(227, 192, 157, 1);
+        font-size: 31px;
+        text-align: center;
+        margin: 2.5rem 0;
+    }
+    
+    h3{
+        padding: 0 20px;
+        color: rgb(0, 0, 0);
+        font-size: 21px;
+        font-weight: 400;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+    
+    a{
+        background-color: rgba(249, 146, 117, 1);
+        border: none;
+        padding: 1rem 3rem;
+        color: #FFF;
+        font-size: 21px;
+        margin: 2rem 0;
+        border-radius: 50px;
+    }
+    
+    a:hover{
+        background-color: rgb(255, 113, 74);
+    }
+    
+    a:active{
+        transform: scale(1.1);
+        transform: transform  0.1s ease-in-out;;
+    }
+    
+    .one, .three, .five{
+        background-color: rgba(254, 249, 240, 1);
+        padding: 5rem 0;
+    }
+    
+    p{
+        padding: 0 30px;
+        color: rgb(0, 0, 0);
+        font-weight: 400;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    .footer{
+        background-color: black;
+        padding: 2.5rem;
+    }
+    
+    .footer p {
+        color: #ffffff;
+    }
+
+    .sleva img, .seredina img  {
+        width: 400px; /* Больше всех */
+        height: 300px;
+    }
+
+    .one, .three, .five{
+        background-color: rgba(254, 249, 240, 1);
+        padding: 3rem 0;
+    }
+    
+}
+
+@media (max-width: 708px){
+    .image-1 {
+        display: none;
+    }
+    
+    .image-2 {
+        width: 300px; /* Больше всех */
+        height: 300px;
+        top: 10px;
+        left: 0%; /* По центру */
+    }
+
+    .image-2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .image-3 {
+        display: none;
+    }
+
+    .image-11 {
+        display: none;
+    }
+    
+    .image-21 {
+        width: 300px; /* Больше всех */
+        height: 300px;
+        top: 10%; /* Снизу */
+        margin: auto;
+    }
+
+    .image-21 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    .img{
+        position: relative; /* Важно: для позиционирования дочерних элементов */
+        width: 90%; /* Задайте ширину контейнера */
+        height: 300px; /* Задайте высоту контейнера */
+        margin: auto; /* Центрируем контейнер */
+    }
+
+    h1{
+        padding: 0 50px;
+        color: rgba(227, 192, 157, 1);
+        font-size: 31px;
+        text-align: center;
+        margin: 2.5rem 0;
+    }
+
+    .gallery-grid{
+        width: 90%;
+    }
+
+    .gallery-grid img {
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
+    }
+
+    .sleva img, .seredina img  {
+        width: 80%px; /* Больше всех */
+        height: 80%px;
+        object-fit: cover
+        
+    }
+}
+
+@media (max-width: 608px){
+
+    h1{
+        padding: 0 10px;
+        color: rgba(227, 192, 157, 1);
+        font-size: 31px;
+        text-align: center;
+        margin: 2.5rem 0;
+    }
+    
+    h2{
+        padding: 0 10px;
+        color: rgba(227, 192, 157, 1);
+        font-size: 31px;
+        text-align: center;
+        margin: 2.5rem 0;
+    }
+    
+    h3{
+        padding: 0 0px;
+        color: rgb(0, 0, 0);
+        font-size: 21px;
+        font-weight: 400;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+    
+    a{
+        background-color: rgba(249, 146, 117, 1);
+        border: none;
+        padding: 1rem 3rem;
+        color: #FFF;
+        font-size: 21px;
+        margin: 2rem 0;
+        border-radius: 50px;
+    }
+    
+    a:hover{
+        background-color: rgb(255, 113, 74);
+    }
+    
+    a:active{
+        transform: scale(1.1);
+        transform: transform  0.1s ease-in-out;;
+    }
+    
+    .one, .three, .five{
+        background-color: rgba(254, 249, 240, 1);
+        padding: 5rem 0;
+    }
+    
+    p{
+        padding: 0 30px;
+        color: rgb(0, 0, 0);
+        font-weight: 400;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    .footer{
+        background-color: black;
+        padding: 2.5rem;
+    }
+    
+    .footer p {
+        color: #ffffff;
+    }
+
+    .sleva , .seredina   {
+        object-fit: cover;
+        position: static; 
+
+        display: flex;          /* Включаем Flexbox */
+        justify-content: center; /* Центрируем по горизонтали */
+        align-items: center;
+    }
+
+    .sleva img, .seredina img  {
+        width: 400px; /* Больше всех */
+        height: 300px;
+    }
+
+    .one, .three, .five{
+        background-color: rgba(254, 249, 240, 1);
+        padding: 3rem 0;
+    }
+    
+}
+
+@media (max-width: 508px){
+
+    h1{
+        padding: 0 5px;
+        color: rgba(227, 192, 157, 1);
+        font-size: 21px;
+        text-align: center;
+        margin: 2.5rem 0 0 0;
+    }
+
+    .image-2  {
+        object-fit: cover;
+        width: 200px; /* Больше всех */
+        height: 200px;
+    }
+
+    .image-21  {
+        padding: 1rem 0;
+        object-fit: cover;
+        width: 200px; /* Больше всех */
+        height: 200px;
+    }
+
+    .img {
+        position: relative;
+        width: 90%;
+        height: 200px;
+        margin: auto;
+    }
+    
+     .titule-text h3, .one-text h3, .two-text h3, .three-text h3, .zagolovoc h3{
+        display: none;
+    }
+    
+    a{
+        background-color: rgba(249, 146, 117, 1);
+        border: none;
+        padding: 1rem 3rem;
+        color: #FFF;
+        font-size: 21px;
+        margin: 2rem 0;
+        border-radius: 50px;
+    }
+    
+    a:hover{
+        background-color: rgb(255, 113, 74);
+    }
+    
+    a:active{
+        transform: scale(1.1);
+        transform: transform  0.1s ease-in-out;;
+    }
+    
+    .one, .three, .five{
+        background-color: rgba(254, 249, 240, 1);
+        padding: 5rem 0;
+    }
+    
+    p{
+        padding: 0 30px;
+        color: rgb(0, 0, 0);
+        font-weight: 400;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    .footer{
+        background-color: black;
+        padding: 2.5rem;
+    }
+    
+    .footer p {
+        color: #ffffff;
+    }
+
+    .sleva , .seredina   {
+        object-fit: cover;
+        position: static; 
+
+        display: flex;          /* Включаем Flexbox */
+        justify-content: center; /* Центрируем по горизонтали */
+        align-items: center;
+    }
+
+    .sleva img, .seredina img  {
+        width: 400px; /* Больше всех */
+        height: 300px;
+        border: 50%;
+    }
+
+    .one, .three, .five{
+        background-color: rgba(254, 249, 240, 1);
+        padding: 3rem 0;
+    }
+    
+    .border{
+        padding: 0 30px;
+    }
+
+    a{
+        background-color: rgba(249, 146, 117, 1);
+        border: none;
+        padding: 0.5rem 1.5rem;
+        color: #FFF;
+        font-size: 15px;
+        margin: 2rem 0;
+        border-radius: 50px;
+    }
+
+    .gallery-grid{
+        margin-left: 1rem;
+        width: 90%;
+        display: flex;          /* Включаем Flexbox */
+        flex-direction: column; /* Размещаем элементы вертикально */
+        justify-content: center; /* Центрируем по горизонтали (в данном случае, выравниваем по центру столбца) */
+        align-items: center;
+    }
+
+    .gallery-grid img {
+        width: 50%; /* Ширина изображения (относительно ширины gallery-grid) */
+        height: auto; /* Автоматическая высота (сохранение пропорций) */
+        position: static; /* Убираем абсолютное позиционирование, если оно есть */
+        object-fit: cover; /* Чтобы изображения не искажались */
+        margin: 5px 0; /* Добавляем небольшой отступ сверху и снизу */
+    }
+    
+}
+
+@media (max-width: 508px){
+
+    .sleva img, .seredina img {
+        width: 90%; /* Изображение занимает 50% ширины viewport */
+        height: auto;
+        max-width:  400px; 
+    }
+
+    p{
+        font-size: 11px;
+    }
+
+    .ex400 h3{
+        display: block;
+        padding: 0 50px;
+        color: rgb(0, 0, 0);
+        font-size: 21px;
+        font-weight: 400;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+}
